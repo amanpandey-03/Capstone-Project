@@ -1,6 +1,30 @@
-.setTitle{
-    margin-top: 2rem;
+p{  
+    margin: 5px ;
     text-align: center;
     font-size: 30px;
 }
 
+.setInput{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: space-evenly;
+}
+
+.picContainer{
+  height: 55vh;
+  width: 45vw;
+  background-image: url("../../public/grid.png");
+}
+
+.container{
+    margin: auto;
+    margin-top: 35px;
+   display: flex;
+   flex-direction: row;
+   max-width: 60vw;
+}
+
+.home{
+    width: 45vw;;
+}
