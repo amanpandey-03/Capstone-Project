@@ -2,41 +2,54 @@ import { TextField ,MenuItem, Button} from '@mui/material'
 import  { React,useState } from 'react'
 import "./Home.css"
 import Categories from "../Data/Categories"
+import ErrorMessage from '../components/ErrorMessage'
+import { useHistory } from 'react-router-dom'
 
 
 
-const  Home = ({name,setName}) => {
+const  Home = ({name,setName,fetchQuestions}) => {
   const[category,setCategory] = useState("");
   const[difficulty,setDifficulty] = useState("");
   const[error,setError] = useState(false);
 
+
+const history = useHistory();
+
   const handleSubmit= () => {
-    
-  }
+    if(!category || !difficulty || !name){
+      setError(true);
+      return;
+    }
+    else{
+      setError(false);
+      fetchQuestions(category,difficulty);
+      history.push("/quiz");
+    }
+  };
 
   return (
 
     <div className="container">
       
       
-      <div className='picContainer'>
-        
+      <div className='imgContainer'>
       </div>
 
 
 
-      <div className='home'>
+      {/* <div className='home'> */}
         
         
-          <div className="settings">
-            <p>Quiz Settings</p>
-          </div>
+          
 
           <div className='setInput'>
+          
+          
+            <span>Quiz Settings</span>
 
             <TextField
               label="Enter Your Name"
-              variant="filled"
+              variant="outlined"
               style={{ marginBottom: 25 }}
               onChange={(e) => setName(e.target.value)} 
               value={name}
@@ -46,7 +59,7 @@ const  Home = ({name,setName}) => {
             <TextField
               select
               label="Select Category"
-              variant="filled"
+              variant="outlined"
               style={{ marginBottom: 25 }}
               onChange={(e) => setCategory(e.target.value)}
               value={category}
@@ -64,7 +77,7 @@ const  Home = ({name,setName}) => {
             <TextField
               select
               label="Select Difficulty"
-              variant="filled"
+              variant="outlined"
               style={{ marginBottom: 25 }}
                onChange={(e) => setDifficulty(e.target.value)}
                value= {difficulty}
@@ -84,7 +97,10 @@ const  Home = ({name,setName}) => {
             variant="contained"
             size="large"
             onClick={handleSubmit}
+            style={{ marginBottom: 25 }}
             >Start Test</Button>
+
+            {error && <ErrorMessage>Please Fill all the fields</ErrorMessage>}
 
           </div>
 
@@ -92,7 +108,7 @@ const  Home = ({name,setName}) => {
         
 
 
-      </div>
+      {/* </div> */}
 
       
     </div>

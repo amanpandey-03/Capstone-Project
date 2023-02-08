@@ -1,30 +1,44 @@
-p{  
-    margin: 5px ;
+span{  
+    margin-bottom: 25px;
     text-align: center;
     font-size: 30px;
 }
 
+/* container consisting the input fields div*/
 .setInput{
+    width: 45vw;
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    padding: 0px 25px 0px 25px;
     justify-content: space-evenly;
 }
 
-.picContainer{
-  height: 55vh;
+
+/*container consisting of the side img div  */
+.imgContainer{
+  height: 60vh;
   width: 45vw;
-  background-image: url("../../public/grid.png");
+  background-image: url("../../public/grid.png") ;
 }
 
+
+/* container consisting of the input fields and the picture div */
 .container{
+    padding:15px;
     margin: auto;
     margin-top: 35px;
    display: flex;
    flex-direction: row;
-   max-width: 60vw;
+    max-width: 700px;
+   border-radius: 33px;
+    background: #ffffff;
+    box-shadow:  -18px -18px 35px #acacac,
+                18px 18px 35px #ffffff;
+
 }
 
-.home{
-    width: 45vw;;
-}
+
+
+
+
+
