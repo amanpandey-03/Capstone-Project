@@ -95,7 +95,7 @@ const history = useHistory();
             
             <Button
             variant="contained"
-            size="large"
+            size="large" 
             onClick={handleSubmit}
             style={{ marginBottom: 25 }}
             >Start Test</Button>
