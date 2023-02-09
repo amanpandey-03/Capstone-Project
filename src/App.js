@@ -1,6 +1,5 @@
-import { BrowserRouter , HashRouter, Route, withRouter } from "react-router-dom";
+import { BrowserRouter ,  Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
-// import { BrowserRouter, Route, Switch ,Router } from "react-router";
 import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
