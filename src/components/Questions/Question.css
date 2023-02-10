@@ -4,18 +4,42 @@
   font-weight: 500;
   background-color: antiquewhite;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 15px;
 }
 
 .buttonContainer{
+  width: 100%;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-/* }
+
 .singleOption{
   padding: 10px;
   margin: 5px;
+  width: 40%;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
 
-} */
+
+.options{
+  padding-top: 20px;
+  width: 100%;
+  display: flex; 
+}
+
+.controls{
+  padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.controlbtn{
+  width: 45%;
+  background-color: black;
+}
