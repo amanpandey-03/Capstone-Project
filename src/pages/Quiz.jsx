@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CircularProgress } from "@mui/material";
 import "./Quiz.css";
+import Question from "../components/Questions/Question";
 
 const Quiz = ({name, score, questions, setQuestions, setScore }) => {
 const[options ,setOptions ] = useState();
@@ -27,11 +28,32 @@ console.log(options);
     <span className="welcomeTitle">
       Welcome {name}
     </span>
+    <hr/>
     {
-      questions ? <>Questions</> :  <CircularProgress style={{margin:100}}
+      questions ? (
+      <>
+      <div className="quizInfo">
+        <span className="info">{questions[currQues].category}</span>
+        <span className="info"> Score:{score}</span>
+      </div>
+      <Question
+      currQues={currQues}
+      setCurrQues={setCurrQues}
+      questions={questions}
+      options={options}
+      correct={questions[currQues]?.correct_answer}
+      score={score}
+      setScore={setScore}
+      setQuestions={setQuestions}
+      />
+      </>
+      ) : ( 
+      <CircularProgress style={{margin:100}}
       color="inherit"
       size={150}
-      thickness={1}/>
+      thickness={1}
+      />
+      )
     }
   </div>
   )

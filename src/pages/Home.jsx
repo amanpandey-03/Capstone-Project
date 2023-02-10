@@ -45,7 +45,7 @@ const history = useHistory();
           <div className='setInput'>
           
           
-            <span>Quiz Settings</span>
+            <span className='quizSet'>Quiz Settings</span>
 
             <TextField
               label="Enter Your Name"
