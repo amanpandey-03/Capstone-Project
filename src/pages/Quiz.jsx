@@ -16,7 +16,7 @@ const[currQues, setCurrQues] = useState(0);
     questions[currQues]?.correct_answer,
     ...questions[currQues]?.incorrect_answers]));
 
-  },[questions]);
+  },[questions,currQues]);
 
 console.log(options);
  
@@ -44,7 +44,7 @@ console.log(options);
       correct={questions[currQues]?.correct_answer}
       score={score}
       setScore={setScore}
-      setQuestions={setQuestions}
+      // setQuestions={setQuestions}
       />
       </>
       ) : ( 

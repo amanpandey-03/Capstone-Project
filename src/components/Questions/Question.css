@@ -43,3 +43,14 @@
   width: 45%;
   background-color: black;
 }
+
+
+.select{
+  background-color: rgb(55, 176, 55);
+  color: #000000;
+}
+
+.wrong{
+  background-color: rgb(203, 48, 48);
+  color: #ffffff;
+}

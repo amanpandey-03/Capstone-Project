@@ -1,7 +1,15 @@
-.result {
+.finalresult {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 60vh;
     text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  }
+
+  .resultmsg{
+    font-size: 5rem;
+    margin: 30px;
   }

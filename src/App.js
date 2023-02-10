@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz'
-import Result from './pages/Result'
+import Result from "./pages/Result";
 import { useState } from "react";
 import axios from "axios";
 
@@ -51,7 +51,8 @@ const fetchQuestions= async(category="",difficulty="")=>{
         </Route>
 
         <Route path='/result' exact>
-            <Result/>
+            <Result name={name}
+            score = {score}/>
         </Route>
 
        </Switch>

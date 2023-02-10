@@ -2,6 +2,7 @@ import { useState } from "react";
 import"./Question.css"
 import ErrorMessage from "../ErrorMessage";
 import { Button } from "@mui/material";
+import { useHistory } from "react-router-dom";
 
 const Question = ({
       currQues,
@@ -11,7 +12,6 @@ const Question = ({
       correct,
       score,
       setScore,
-      setQuestions,
 }) => {
 
 const [selected , setSelected] = useState()
@@ -36,11 +36,28 @@ const [error , setError] = useState(false)
     setError(false);
   };
 
+  const handleQuit =() => {
+
+  };
+   
+  const history = useHistory();
+  const handleNext = () =>{
+      if(currQues>8){
+        history.push("/result")
+      }
+      else if (selected){
+        setCurrQues(currQues+1)
+        setSelected()
+      }
+      else{setError("Please Select an option first")}
+  };
+
+
   return (
     <div >
      <h2 className="question">{currQues + 1}. {questions[currQues].question}</h2>
      <div className="options">
-     {error && <ErrorMessage>Please choose atleast one answer</ErrorMessage>}
+     {error && <ErrorMessage></ErrorMessage>}
      <div className="buttonContainer">
      {  
       options &&
@@ -60,12 +77,14 @@ const [error , setError] = useState(false)
         className="controlbtn" 
         variant="contained"
         color="secondary"
-        href="/">
+        href="/"
+        onClick={handleQuit}>
           Quit</Button>
 
 
         <Button className="controlbtn" 
         variant="contained"
+        onClick={handleNext}
         >
           Next</Button>
 
