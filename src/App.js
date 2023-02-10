@@ -40,6 +40,13 @@ const fetchQuestions= async(category="",difficulty="")=>{
             />
         </Route>
 
+        <Route path='/home' exact>
+            <Home name={name} 
+            setName={setName} 
+            fetchQuestions={fetchQuestions}
+            />
+        </Route>
+
         <Route path='/quiz' exact>
             <Quiz
             name={name}

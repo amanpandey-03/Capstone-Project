@@ -37,7 +37,7 @@ const [error , setError] = useState(false)
   };
 
   const handleQuit =() => {
-
+        history.push("/home")
   };
    
   const history = useHistory();
