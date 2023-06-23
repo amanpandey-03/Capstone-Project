@@ -100,15 +100,7 @@ const history = useHistory();
             style={{ marginBottom: 25 }}
             >Start Test</Button>
 
-            {error && <ErrorMessage>Please Fill all the fields</ErrorMessage>}
-
           </div>
-
-
-        
-
-
-      {/* </div> */}
 
       
     </div>
