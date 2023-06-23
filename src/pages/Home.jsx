@@ -1,4 +1,4 @@
-import { TextField ,MenuItem, Button} from '@mui/material'
+import { TextField ,MenuItem, Button, AppBar} from '@mui/material'
 import  { React,useState } from 'react'
 import "./Home.css"
 import Categories from "../Data/Categories"
@@ -30,11 +30,11 @@ const history = useHistory();
   return (
 
     <div className="container">
+       
       
-      
-      <div className='imgContainer'>
-      </div>
 
+      <div className='imgContainer'></div>
+     
 
 
       {/* <div className='home'> */}

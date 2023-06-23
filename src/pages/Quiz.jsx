@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, AppBar } from "@mui/material";
 import "./Quiz.css";
 import Question from "../components/Questions/Question";
 
@@ -25,6 +25,10 @@ console.log(options);
  };
 
   return (<div className="quizContainer">
+
+    {/* Trying to add a appbar : not successful */}
+     {/* <AppBar></AppBar> */}
+      
     <span className="welcomeTitle">
       Welcome {name}
     </span>

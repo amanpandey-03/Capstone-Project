@@ -13,7 +13,7 @@ const Result = ({name,score}) => {
       className="resultbtn"
       size="large"
       variant="contained"
-        href="/Home"
+        href="/Capstone-Project"
       >Back to Home</Button>
     </div>
   )
